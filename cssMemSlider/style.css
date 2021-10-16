@@ -28,7 +28,7 @@ body {
 
 .slides {
   width: 500%;
-  height: 56.25vw;
+  height: 53vw;
   display: flex;
 }
 
@@ -87,6 +87,7 @@ body {
 
 .navigation {
   width: 15%;
+  margin-top: 5vw;
   display: flex;
   justify-content: space-between;
   z-index: 5;
@@ -123,6 +124,7 @@ body {
 
 .container-text {
   width: 85%;
+  margin-top: 5vw;
 }
 
 .text {
@@ -161,4 +163,36 @@ body {
 #radio5:checked ~ .slides > .slide1,
 #radio5:checked ~ .footer > .container-text > .text > .text1 {
   margin-left: -80%;
+}
+
+@media (max-width: 1024px) {
+  .footer {
+    flex-direction: column-reverse;
+  }
+  .navigation {
+    width: 40%;
+    margin: 5vw auto 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .navigation {
+    width: 60%;
+  }
+  .circle {
+    width: 16px;
+    height: 16px;
+    border-radius: 9px;
+  }
+}
+
+@media (max-width: 425px) {
+  .navigation {
+    width: 80%;
+  }
+  .circle {
+    width: 10px;
+    height: 10px;
+    border-radius: 6px;
+  }
 }
