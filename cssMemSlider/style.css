@@ -15,7 +15,8 @@ body {
   margin: 0 auto;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  padding-top: 2.5vw;
 }
 
 .slider{
@@ -27,48 +28,47 @@ body {
 
 .slides {
   width: 500%;
-  height: 75vh;
+  height: 56.25vw;
   display: flex;
 }
 
 .slide {
   width: 20%;
-
-}
-
-.slides .slide img {
-  max-width: 100%;
-  height: auto;
+  transition: 0.7s;
 }
 
 .slide1 {
   background-image: url("img/1.jpg");
   background-size: 100% auto;
-  background-position: center;
+  background-position: center top;
   background-repeat: no-repeat;
 }
+
 .slide2 {
   background-image: url("img/2.jpg");
   background-size: 100% auto;
-  background-position: center;
+  background-position: center top;
   background-repeat: no-repeat;
 }
+
 .slide3 {
   background-image: url("img/3.jpg");
   background-size: 100% auto;
-  background-position: center;
+  background-position: center top;
   background-repeat: no-repeat;
 }
+
 .slide4 {
   background-image: url("img/4.jpg");
   background-size: 100% auto;
-  background-position: center;
+  background-position: center top;
   background-repeat: no-repeat;
 }
+
 .slide5 {
   background-image: url("img/5.jpg");
   background-size: 100% auto;
-  background-position: center;
+  background-position: center top;
   background-repeat: no-repeat;
 }
 
@@ -76,16 +76,21 @@ body {
   display: none;
 }
 
+/*
 .footer {
   position: relative;
   max-width: 100%;
   height: auto;
+  display: flex;
+  justify-content: space-between;
 }
+*/
 
 .navigation {
   width: 30%;
   display: flex;
   justify-content: space-around;
+  float: right;
 }
 
 .circle {
@@ -115,23 +120,70 @@ body {
   border: 2px solid #ffffff;
 }
 
-#radio1:checked ~ .slide1 {
+#radio1:checked ~ .slides > .slide1 {
   margin-left: 0;
 }
 
-#radio2:checked ~ .slide2 {
+#radio2:checked ~ .slides > .slide2 {
   margin-left: -20%;
 }
 
-#radio3:checked ~ .slide3 {
+#radio3:checked ~ .slides > .slide3 {
   margin-left: -40%;
 }
 
-#radio4:checked ~ .slide4 {
+#radio4:checked ~ .slides > .slide4 {
   margin-left: -60%;
 }
 
-#radio5:checked ~ .slide5 {
+#radio5:checked ~ .slides > .slide5 {
   margin-left: -80%;
 }
 
+
+.text {
+  width: 500%;
+  float: left;
+  display: inline-flex;
+  justify-content: space-between;
+}
+
+
+.description {
+
+  font-size: 1.5rem;
+  color: white;
+  transition: 0.7s;
+}
+
+#radio1:checked ~ .text > .text1 {
+
+  margin-left: 0;
+}
+
+#radio2:checked ~ .text > .text2 {
+
+  margin-left: -20%;
+}
+
+#radio3:checked ~ .text > .text3 {
+
+  margin-left: -40%;
+}
+
+#radio4:checked ~ .text > .text4 {
+
+  margin-left: -60%;
+}
+
+#radio5:checked ~ .text > .text5 {
+
+  margin-left: -80%;
+}
+
+/*
+.text1 {
+  display: inline;
+  float: left;
+}
+*/
