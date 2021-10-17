@@ -123,21 +123,25 @@ body {
   transition: all 0.5s ease;
 }
 
-.container-circle:hover  .circle{
+.container-circle:hover  .circle,
+.circle:hover {
   background-color: #ffffff;
 }
 
-.container-circle:active .circle {
+.container-circle:active .circle,
+.circle:active {
   background-color: #dfe6e9;
   border: 2px solid #00d2d3;
 }
 
-.container-circle:focus  .circle{
+.container-circle:focus  .circle,
+.circle:focus {
   background-color: #dfe6e9;
   border: 2px solid #00d2d3;
 }
 
-.container-circle:hover  .circle{
+.container-circle:hover  .circle,
+.circle:hover {
   border: 2px solid #ffffff;
 }
 
@@ -264,6 +268,20 @@ hr {
 @media (max-width: 1440px) {
   .container,
   .footer {
+    width: 70vw;
+  }
+  .text-nav {
+    flex-direction: column-reverse;
+  }
+  .navigation {
+    width: 40%;
+    margin: 5vw auto 0 auto;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container,
+  .footer {
     width: 85vw;
   }
   .slides {
@@ -272,15 +290,8 @@ hr {
   .slide {
     border-radius: 15px;
   }
-  .text-nav {
-    flex-direction: column-reverse;
-  }
   .description {
     height: 5rem;
-  }
-  .navigation {
-    width: 40%;
-    margin: 5vw auto 0 auto;
   }
 }
 
@@ -299,6 +310,7 @@ hr {
     height: 16px;
     border-radius: 9px;
   }
+
   .text:before {
     font-size: 1.5rem;
   }
