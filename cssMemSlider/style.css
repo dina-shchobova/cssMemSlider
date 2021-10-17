@@ -163,6 +163,7 @@ body {
 
 .text:before {
   font-size: 2rem;
+  font-weight: 600;
 }
 
 .text1:before {
@@ -260,15 +261,7 @@ hr {
   background-position: left center;
 }
 
-
 @media (max-width: 1440px) {
-  .navigation {
-    width: 40%;
-    margin: 5vw auto 0 auto;
-  }
-}
-
-@media (max-width: 1024px) {
   .container,
   .footer {
     width: 85vw;
@@ -282,6 +275,9 @@ hr {
   .text-nav {
     flex-direction: column-reverse;
   }
+  .description {
+    height: 5rem;
+  }
   .navigation {
     width: 40%;
     margin: 5vw auto 0 auto;
@@ -289,6 +285,9 @@ hr {
 }
 
 @media (max-width: 768px) {
+  .title {
+    font-size: 3rem;
+  }
   .slide {
     border-radius: 10px;
   }
@@ -299,6 +298,9 @@ hr {
     width: 16px;
     height: 16px;
     border-radius: 9px;
+  }
+  .text:before {
+    font-size: 1.5rem;
   }
 }
 
@@ -313,5 +315,14 @@ hr {
     width: 10px;
     height: 10px;
     border-radius: 6px;
+  }
+}
+
+@media (max-width: 375px) {
+  .title {
+    font-size: 2rem;
+  }
+  .text:before {
+    font-size: 1rem;
   }
 }
