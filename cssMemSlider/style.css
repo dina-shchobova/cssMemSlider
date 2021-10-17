@@ -1,0 +1,337 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #dfe6e9;
+  font-family:  'Manrope', sans-serif;
+  font-size: 1rem;
+}
+
+.container {
+  width: 60vw;
+  height: 80vh;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+}
+
+.title {
+  width: 70vw;
+  height: calc(10vh - 2px);
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Manrope', sans-serif;
+  font-size: 4rem;
+  font-weight: 600;
+  color: #00d2d3;
+}
+
+.slider{
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.slides {
+  width: 500%;
+  height: 33.7vw;
+  display: flex;
+}
+
+.slide {
+  width: 20%;
+  transition: 0.7s;
+  border-radius: 0.7rem;
+}
+
+.slide1 {
+  background-image: url("img/1.jpg");
+  background-size: 100% auto;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+
+.slide2 {
+  background-image: url("img/2.jpg");
+  background-size: 100% auto;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+
+.slide3 {
+  background-image: url("img/3.jpg");
+  background-size: 100% auto;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+
+.slide4 {
+  background-image: url("img/4.jpg");
+  background-size: 100% auto;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+
+.slide5 {
+  background-image: url("img/5.jpg");
+  background-size: 100% auto;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+
+.radio {
+  display: none;
+}
+
+.text-nav {
+  max-width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navigation {
+  width: 20%;
+  height: 3rem;
+  margin-top: 2vw;
+  display: flex;
+  justify-content: space-between;
+  z-index: 5;
+  opacity: 1;
+  background-color: #dfe6e9;
+}
+
+.container-circle {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.circle {
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 0.8rem;
+  border: 2px solid #00d2d3;
+  background-color: #00d2d3;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.container-circle:hover  .circle,
+.circle:hover {
+  background-color: #ffffff;
+}
+
+.container-circle:active .circle,
+.circle:active {
+  background-color: #dfe6e9;
+  border: 2px solid #00d2d3;
+}
+
+.container-circle:focus  .circle,
+.circle:focus {
+  background-color: #dfe6e9;
+  border: 2px solid #00d2d3;
+}
+
+.container-circle:hover  .circle,
+.circle:hover {
+  border: 2px solid #ffffff;
+}
+
+.container-text {
+  width: 80%;
+  margin-top: 2vw;
+}
+
+.description {
+  width: 625%;
+  height: 3rem;
+  display: inline-flex;
+  align-items: center;
+}
+
+.text {
+  display: inline-block;
+  width: 20%;
+  font-size: 1rem;
+  color: black;
+  transition: 0.7s;
+}
+
+.text:before {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.text1:before {
+  content: '«Нельзя просто так взять и…»  ';
+}
+
+.text2:before {
+  content: '«Бокал за тех…» ';
+}
+
+.text3:before {
+  content: 'Facepalm  ';
+}
+
+.text3:before {
+  content: 'Facepalm  ';
+}
+
+.text4:before {
+  content: 'Возмущение  ';
+}
+
+.text5:before {
+  content: '«Да ладно!»  ';
+}
+
+#radio1:checked ~ .slides > .slide1,
+#radio1:checked ~ .text-nav > .container-text > .description > .text1 {
+  margin-left: 0;
+}
+
+#radio2:checked ~ .slides > .slide1,
+#radio2:checked ~ .text-nav > .container-text > .description > .text1 {
+  margin-left: -20%;
+}
+
+#radio3:checked ~ .slides > .slide1,
+#radio3:checked ~ .text-nav > .container-text > .description > .text1 {
+  margin-left: -40%;
+}
+
+#radio4:checked ~ .slides > .slide1,
+#radio4:checked ~ .text-nav > .container-text > .description > .text1 {
+  margin-left: -60%;
+}
+
+#radio5:checked ~ .slides > .slide1,
+#radio5:checked ~ .text-nav > .container-text > .description > .text1 {
+  margin-left: -80%;
+}
+
+.footer {
+  width: 60vw;
+  height: calc(10vh - 2px);
+  background-color: #dfe6e9;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+
+hr {
+  width: 100%;
+  height: 2px;
+  background-color: #95afc0;
+  margin: 0;
+  border: 0;
+}
+
+.link {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.github {
+  display: block;
+  width: 6vh;
+  height: 6vh;
+  background-size: 6vh;
+  background-repeat: no-repeat;
+  background-image: url(img/github.svg);
+}
+
+.rss {
+  display: block;
+  width: 55%;
+  height: 6vh;
+  background-image: url(img/rss.svg);
+  background-size: auto 6vh;
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+@media (max-width: 1440px) {
+  .container,
+  .footer {
+    width: 70vw;
+  }
+  .text-nav {
+    flex-direction: column-reverse;
+  }
+  .navigation {
+    width: 40%;
+    margin: 5vw auto 0 auto;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container,
+  .footer {
+    width: 85vw;
+  }
+  .slides {
+    height: 47.5vw;
+  }
+  .slide {
+    border-radius: 0.5rem;
+  }
+  .description {
+    height: 5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 3rem;
+  }
+  .slide {
+    border-radius: 0.3rem;
+  }
+  .navigation {
+    width: 60%;
+  }
+  .circle {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  .text:before {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 425px) {
+  .title {
+    font-size: 2rem;
+  }
+  .navigation {
+    width: 80%;
+  }
+  .circle {
+    width: 0.7rem;
+    height: 0.7rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .title {
+    font-size: 2rem;
+  }
+  .text:before {
+    font-size: 1rem;
+  }
+}
