@@ -95,12 +95,22 @@ body {
 
 .navigation {
   width: 20%;
+  height: 3rem;
   margin-top: 2vw;
   display: flex;
   justify-content: space-between;
   z-index: 5;
   opacity: 1;
   background-color: #dfe6e9;
+}
+
+.container-circle {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
 
 .circle {
@@ -113,21 +123,21 @@ body {
   transition: all 0.5s ease;
 }
 
-.circle:hover {
+.container-circle:hover  .circle{
   background-color: #ffffff;
 }
 
-.circle:active {
+.container-circle:active .circle {
   background-color: #dfe6e9;
   border: 2px solid #00d2d3;
 }
 
-.circle:focus {
+.container-circle:focus  .circle{
   background-color: #dfe6e9;
   border: 2px solid #00d2d3;
 }
 
-.circle:hover {
+.container-circle:hover  .circle{
   border: 2px solid #ffffff;
 }
 
@@ -138,15 +148,45 @@ body {
 
 .description {
   width: 625%;
+  height: 3rem;
   display: inline-flex;
+  align-items: center;
 }
 
 .text {
   display: inline-block;
   width: 20%;
-  font-size: 1.5rem;
+  font-size: 1rem;
   color: black;
   transition: 0.7s;
+}
+
+.text:before {
+  font-size: 2rem;
+}
+
+.text1:before {
+  content: '«Нельзя просто так взять и…»  ';
+}
+
+.text2:before {
+  content: '«Бокал за тех…» ';
+}
+
+.text3:before {
+  content: 'Facepalm  ';
+}
+
+.text3:before {
+  content: 'Facepalm  ';
+}
+
+.text4:before {
+  content: 'Возмущение  ';
+}
+
+.text5:before {
+  content: '«Да ладно!»  ';
 }
 
 #radio1:checked ~ .slides > .slide1,
