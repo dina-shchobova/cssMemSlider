@@ -3,20 +3,28 @@ body {
   padding: 0;
   position: relative;
   box-sizing: border-box;
-  background-color: #7f8fa6;
-  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  background-color: #dfe6e9;
+  font-family:  'Manrope', sans-serif;
   font-size: 1rem;
 }
 
 .container {
   position: relative;
-  width: 70vw;
-  height: 100vh;
+  width: 60vw;
+  height: 85vh;
   margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  padding-top: 2.5vw;
+}
+
+.title {
+  width: 70vw;
+  margin: 0 auto;
+  text-align: center;
+  font-family: 'Manrope', sans-serif;
+  font-size: 4rem;
+  color: #00d2d3;
 }
 
 .slider{
@@ -28,14 +36,14 @@ body {
 
 .slides {
   width: 500%;
-  height: 39.5vw;
+  height: 33.7vw;
   display: flex;
 }
 
 .slide {
   width: 20%;
   transition: 0.7s;
-  /*opacity: 0;*/
+  border-radius: 20px;
 }
 
 .slide1 {
@@ -77,7 +85,7 @@ body {
   display: none;
 }
 
-.footer {
+.text-nav {
   position: relative;
   max-width: 100%;
   height: auto;
@@ -87,12 +95,12 @@ body {
 
 .navigation {
   width: 20%;
-  margin-top: 5vw;
+  margin-top: 2vw;
   display: flex;
   justify-content: space-between;
   z-index: 5;
   opacity: 1;
-  background-color: #7f8fa6;
+  background-color: #dfe6e9;
 }
 
 .circle {
@@ -110,12 +118,12 @@ body {
 }
 
 .circle:active {
-  background-color: #7f8fa6;
+  background-color: #dfe6e9;
   border: 2px solid #00d2d3;
 }
 
 .circle:focus {
-  background-color: #7f8fa6;
+  background-color: #dfe6e9;
   border: 2px solid #00d2d3;
 }
 
@@ -125,46 +133,93 @@ body {
 
 .container-text {
   width: 80%;
-  margin-top: 5vw;
+  margin-top: 2vw;
 }
 
-.text {
+.description {
   width: 625%;
   display: inline-flex;
 }
 
-.description {
+.text {
   display: inline-block;
   width: 20%;
   font-size: 1.5rem;
-  color: white;
+  color: black;
   transition: 0.7s;
 }
 
 #radio1:checked ~ .slides > .slide1,
-#radio1:checked ~ .footer > .container-text > .text > .text1 {
+#radio1:checked ~ .text-nav > .container-text > .description > .text1 {
   margin-left: 0;
 }
 
 #radio2:checked ~ .slides > .slide1,
-#radio2:checked ~ .footer > .container-text > .text > .text1 {
+#radio2:checked ~ .text-nav > .container-text > .description > .text1 {
   margin-left: -20%;
 }
 
 #radio3:checked ~ .slides > .slide1,
-#radio3:checked ~ .footer > .container-text > .text > .text1 {
+#radio3:checked ~ .text-nav > .container-text > .description > .text1 {
   margin-left: -40%;
 }
 
 #radio4:checked ~ .slides > .slide1,
-#radio4:checked ~ .footer > .container-text > .text > .text1 {
+#radio4:checked ~ .text-nav > .container-text > .description > .text1 {
   margin-left: -60%;
 }
 
 #radio5:checked ~ .slides > .slide1,
-#radio5:checked ~ .footer > .container-text > .text > .text1 {
+#radio5:checked ~ .text-nav > .container-text > .description > .text1 {
   margin-left: -80%;
 }
+
+.footer {
+  width: 60vw;
+  height: 5vh;
+  background-color: #dfe6e9;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+}
+
+hr {
+  width: 100%;
+  background-color: #00d2d3;
+}
+
+.link {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.github {
+  display: block;
+  width: 120px;
+  height: 45px;
+  background-size: 35px;
+  background-repeat: no-repeat;
+}
+
+.github {
+  background-image: url("img/github.svg");
+  background-position: left top;
+}
+
+.rss {
+  display: block;
+  position: relative;
+  width: 86px;
+  height: 32px;
+  background-image: url("img/rss.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+
 
 @media (max-width: 1440px) {
 
@@ -174,15 +229,18 @@ body {
   }
 }
 
-
 @media (max-width: 1024px) {
-  .container {
+  .container,
+  .footer {
     width: 85vw;
   }
   .slides {
     height: 47.5vw;
   }
-  .footer {
+  .slide {
+    border-radius: 15px;
+  }
+  .text-nav {
     flex-direction: column-reverse;
   }
   .navigation {
@@ -192,6 +250,9 @@ body {
 }
 
 @media (max-width: 768px) {
+  .slide {
+    border-radius: 10px;
+  }
   .navigation {
     width: 60%;
   }
@@ -203,6 +264,9 @@ body {
 }
 
 @media (max-width: 425px) {
+  .title {
+    font-size: 2rem;
+  }
   .navigation {
     width: 80%;
   }
