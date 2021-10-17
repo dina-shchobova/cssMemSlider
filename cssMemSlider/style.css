@@ -115,9 +115,9 @@ body {
 }
 
 .circle {
-  width: 20px;
-  height: 20px;
-  border-radius: 11px;
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 0.8rem;
   border: 2px solid #00d2d3;
   background-color: #00d2d3;
   cursor: pointer;
@@ -305,9 +305,8 @@ hr {
     width: 60%;
   }
   .circle {
-    width: 16px;
-    height: 16px;
-    border-radius: 9px;
+    width: 1rem;
+    height: 1rem;
   }
 
   .text:before {
@@ -323,9 +322,8 @@ hr {
     width: 80%;
   }
   .circle {
-    width: 10px;
-    height: 10px;
-    border-radius: 6px;
+    width: 0.7rem;
+    height: 0.7rem;
   }
 }
 
