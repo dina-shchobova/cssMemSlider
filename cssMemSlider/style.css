@@ -1,7 +1,6 @@
 body {
   margin: 0;
   padding: 0;
-  position: relative;
   box-sizing: border-box;
   background-color: #dfe6e9;
   font-family:  'Manrope', sans-serif;
@@ -9,7 +8,6 @@ body {
 }
 
 .container {
-  position: relative;
   width: 60vw;
   height: 80vh;
   margin: 0 auto;
@@ -33,7 +31,6 @@ body {
 }
 
 .slider{
-  position: relative;
   width: 100%;
   height: auto;
   overflow: hidden;
@@ -48,7 +45,7 @@ body {
 .slide {
   width: 20%;
   transition: 0.7s;
-  border-radius: 20px;
+  border-radius: 0.7rem;
 }
 
 .slide1 {
@@ -91,7 +88,6 @@ body {
 }
 
 .text-nav {
-  position: relative;
   max-width: 100%;
   height: auto;
   display: flex;
@@ -260,7 +256,6 @@ hr {
 
 .rss {
   display: block;
-  position: relative;
   width: 55%;
   height: 6vh;
   background-image: url(img/rss.svg);
@@ -292,7 +287,7 @@ hr {
     height: 47.5vw;
   }
   .slide {
-    border-radius: 15px;
+    border-radius: 0.5rem;
   }
   .description {
     height: 5rem;
@@ -304,7 +299,7 @@ hr {
     font-size: 3rem;
   }
   .slide {
-    border-radius: 10px;
+    border-radius: 0.3rem;
   }
   .navigation {
     width: 60%;
